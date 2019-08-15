@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+	<title>Chat</title>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+
+<body>
+	 
+            
+        
+	<div class="scrollbar" id="style-1"><div class="force-overflow"></div></div>
+		<div class="container-fluid h-100">
+			<div class="row justify-content-center h-100">
+				
+				<div class="col-md-8 col-xl-6 chat">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+<!--
+								<div class="img_cont">
+									<img src="brian.jpg" class="rounded-circle user_img">
+									<span class="online_icon"></span>
+								</div>
+-->
+								<div class="user_info">
+									<span>Chat with Brian</span>
+								</div>
+								
+							</div>
+							
+						
+						</div>
+						
+						
+						<div class="card-body msg_card_body" id="textBox">
+							<div class="d-flex justify-content-start mb-4 slide" >
+								<div class="img_cont_msg">
+									<img src="brian.jpg" class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+									Buenas Tardes. ¿Cómo está usted?
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="input-group">
+								<input style="resize: none; color: white;" type="text" name="" id="textMess" class="form-control type_msg" placeholder="Type your message..." autocomplete="off">
+								<div class="input-group-append">
+									<button tabindex="0" onClick="textMessage()" class="send_btn" id="button1"><img style="background-color: white; border: none; background: none;" width="20px" height="20px" src="https://static.thenounproject.com/png/1530315-200.png"></button>
+								</div>
+							</div>
+						</div><div style="display: none;" align="center" id="great_job"><h2>Great Job!</h2></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<script>
+	
+		var input = document.getElementById("textMess");
+			input.addEventListener("keyup", function(event) {
+				if (event.keyCode === 13) {
+				event.preventDefault();
+				document.getElementById("button1").click();
+			}
+		});
+	
+	</script>
+		
+	</body>
+</html>
